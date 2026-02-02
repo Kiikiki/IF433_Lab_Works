@@ -9,14 +9,15 @@ fun main (args: Array<String>) {
 
     println("Radius: $radius, Area: " + area)
 
-    checkSize(area)
+    var result: String = checkSize(area)
+    println("Result: $result")
 }
 
-fun checkSize(area: Double) {
+fun checkSize(area: Double): String {
     if(area > 100) {
-        println("This is a big circle")
+        return "This is a big circle"
     }
     else {
-        println("This is a small circle")
+        return "This is a small circle"
     }
 }
