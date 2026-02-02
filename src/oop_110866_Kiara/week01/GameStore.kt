@@ -1,4 +1,6 @@
 package oop_110866_Kiara.week01
 
-class GameStore {
+fun main() {
+    val gameTitle = "Minecraft"
+    val price = 320000
 }
