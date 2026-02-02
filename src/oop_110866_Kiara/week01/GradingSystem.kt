@@ -14,4 +14,8 @@ fun main () {
     }
 
     println("Your grade: $grade")
+
+    println("Status: ${calculateStatus(score)}")
 }
+
+fun calculateStatus(score: Int) = if (score > 75) "Pass" else "Didn't Pass"
