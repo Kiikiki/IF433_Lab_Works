@@ -2,7 +2,7 @@ package oop_110866_Kiara.week02
 
 import java.util.Scanner
 
-fun Main() {
+fun main() {
     val scanner = Scanner(System.`in`)
 
     println("--- APP PMB UMN ---")
