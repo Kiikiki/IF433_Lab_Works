@@ -8,7 +8,5 @@ fun main() {
     println("Name: ${item.name}, Damage: ${item.damage}, Tier: ${item.tier}")
 
     item.damage = 9999
-    println("Name: ${item.name}, Damage: ${item.damage}", "Tier: ${item.tier}")
-
-
+    println("Name: ${item.name}, Damage: ${item.damage}, Tier: ${item.tier}")
 }
