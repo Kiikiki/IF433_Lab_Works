@@ -11,4 +11,8 @@ class Player(val username: String) {
             println("$username Level Up to lv. $level! Your level of violence increases")
         }
     }
+
+    fun printInfo() {
+        println("Name: $username, Lv: $level (${xp % 100}/100) ")
+    }
 }
