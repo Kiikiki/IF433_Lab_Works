@@ -12,10 +12,22 @@ class Employee(val name: String) {
     set(value) {
         if(value < 0) {
             println("ERROR: Wage cannot be negative. Will automatically be set to 0!")
-            field = 0;
+            field = 0
         }
         else {
             field = value
         }
     }
+
+    private var performanceRating: Int = 3
+
+    fun increasePerformance() {
+        performanceRating++
+        println("performanceRating $name increased: $performanceRating !")
+    }
+
+    fun printStatus() {
+        println("Employee: $name, Rating: $performanceRating")
+    }
 }
+
