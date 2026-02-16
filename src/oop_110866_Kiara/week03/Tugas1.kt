@@ -9,11 +9,11 @@ fun main() {
 
     //testing overpowered weapon
     val item2 = Weapon("Regret")
-    item2.damage = 5000
+    item2.damage = 9999
     println("Name: ${item2.name}, Damage: ${item2.damage}, Tier: ${item2.tier}")
 
     //testing insanely bad weapon
     val item3 = Weapon("Excalipoor")
-    item3.damage = -5000
+    item3.damage = -50
     println("Name: ${item3.name}, Damage: ${item3.damage}, Tier: ${item3.tier}")
 }
