@@ -1,6 +1,4 @@
-package oop_110866_Kiara.week02
-
-import oop_110866_Kiara.week04.Employee
+package oop_110866_Kiara.week04
 
 class Manager(name: String, baseSalary: Int): Employee(name, baseSalary) {
     override fun work() {
