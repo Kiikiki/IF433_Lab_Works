@@ -15,4 +15,10 @@ fun main() {
     myCar.honk()
     //testing joint parent + child function
     myCar.accelerate()
+
+    println("\n--- Testing Electric Car ---")
+    val myElectricalCar = ElectricalCar("Pikachu", 0, 100)
+    myElectricalCar.openTrunk()
+    myElectricalCar.honk()
+    myElectricalCar.accelerate()
 }
