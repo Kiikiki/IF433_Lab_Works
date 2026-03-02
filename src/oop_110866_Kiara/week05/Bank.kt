@@ -9,6 +9,17 @@ fun main() {
     println("========= THE BANK =========")
     for(account in accountList) {
         account.processPayment(75000.0)
+
+        when(account) {
+            is EWallet -> {
+                println("=> detected an EWallet")
+                account.topUp(50000.0)
+
+                account.processPayment(75000.0)
+            }
+        }
     }
+
+
     println("----------------------------")
 }
