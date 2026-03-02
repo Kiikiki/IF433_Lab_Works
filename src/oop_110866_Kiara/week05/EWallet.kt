@@ -3,7 +3,7 @@ package oop_110866_Kiara.week05
 class EWallet(accountName: String, var balance: Double) : PaymentMethod(accountName) {
     override fun processPayment(amount: Double) {
         if (balance < amount) {
-            println("[payment process] A fly comes out of your balance. They don't accept flies")
+            println("[payment process] A fly comes out of your balance. They don't accept flies \uD83E\uDEB0")
         }
         else {
             balance -= amount
