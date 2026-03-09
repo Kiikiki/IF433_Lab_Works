@@ -12,4 +12,14 @@ class SmartHomeHub {
             }
         }
     }
+    fun activeSecurityMode() {
+        for (device in devices) {
+            if(device is Recordable) {
+                device.startRecord()
+            }
+            if(device is SmartSpeaker) {
+                device.playMusic("Warning Alarm")
+            }
+        }
+    }
 }
