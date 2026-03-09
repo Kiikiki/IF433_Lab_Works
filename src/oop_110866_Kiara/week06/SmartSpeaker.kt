@@ -8,6 +8,6 @@ class SmartSpeaker(override val id: String, override val name: String): SmartDev
         println("[Speaker] $name: Crick Crick Crick. Silence shrouds the room")
     }
     fun playMusic(song: String) {
-        println("$song is playing. Nice Taste!")
+        println("$song is playing.")
     }
 }

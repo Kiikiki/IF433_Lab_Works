@@ -5,7 +5,7 @@ class SmartHomeHub {
     fun addDevice(device: SmartDevice) {
         devices.add(device)
     }
-    fun turnOffAllSwitches(device: SmartDevice) {
+    fun turnOffAllSwitches() {
         for (device in devices) {
             if(device is Switchable) {
                 device.turnOff()
