@@ -11,5 +11,9 @@ class Weapon private constructor(val item: GameItem, val durability: Int) {
             val epicSword = GameItem("Legendary Dragon Sword", 100, ItemRarity.EPIC)
             return Weapon(epicSword, 200)
         }
+
+        fun blacksmith(item: GameItem, durability: Int): Weapon {
+            return Weapon(item, durability)
+        }
     }
 }
