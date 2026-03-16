@@ -28,4 +28,12 @@ fun main() {
     //destructuring
     val (userName, userAge) = data1
     println("Destructured: $userName is $userAge old")
+
+    println("\n=== Test Sealed Case===")
+    val response: ApiResponse = ApiResponse.Success("Data successfully pulled!")
+
+    val uiMessage = when (response) {
+        is ApiResponse.Success -> "Show: ${response.data}"
+        is ApiResponse.Error -> "Show Alert: ${response.message}"
+    }
 }
