@@ -35,5 +35,7 @@ fun main() {
     val uiMessage = when (response) {
         is ApiResponse.Success -> "Show: ${response.data}"
         is ApiResponse.Error -> "Show Alert: ${response.message}"
+        ApiResponse.Loading -> "Show spinner"
     }
+    println(uiMessage)
 }
