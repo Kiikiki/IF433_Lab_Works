@@ -14,4 +14,10 @@ fun main() {
     val reg2 = RegularUser("Alice", 22)
     println(reg1)
     println("Same? ${reg1 == reg2}")
+
+    println("\n=== Test Data Class ===")
+    val data1 = DataUser("Alice", 22)
+    val data2 = DataUser("Alice", 22)
+    println(data1)
+    println("Same? ${data1 == data2}")
 }
