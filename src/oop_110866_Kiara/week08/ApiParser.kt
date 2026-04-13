@@ -25,16 +25,18 @@ class ApiParser {
 
         return null
     }
-}
 
-fun checkout(product: Product) {
-    //extract id
-    val id = when (product) {
-        is Electronic -> product.id
-        is Clothing -> product.id
+    fun checkout(product: Product) {
+        //extract id
+        val id = when (product) {
+            is Electronic -> product.id
+            is Clothing -> product.id
+        }
+
+        val transactionId = JavaPaymentService.processPayment(id)!!
+        println(transactionId)
     }
-
-    val transactionId = JavaPaymentService.processPayment(id)!!
-    println(transactionId)
 }
+
+
 
