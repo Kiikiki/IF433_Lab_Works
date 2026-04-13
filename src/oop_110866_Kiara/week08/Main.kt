@@ -7,7 +7,7 @@ fun main() {
     val destination = emptyOrder.deliveryDetails?.address?.city?.name ?: "Unknown City"
     println("destination: $destination")
 
-    println("\n === Test Let Block ===")
+    println("\n=== Test Let Block ===")
     val validOrder = Order(null, 250000)
 
     val receipt = validOrder.totalPrice?.let { price ->
@@ -16,4 +16,13 @@ fun main() {
     } ?: "[Invalid Transaction]: Price is not set!"
 
     println(receipt)
+
+    println("\n=== Test Safe Casting ===")
+    val mixedData: List<Any> = listOf(
+        "smartphone",
+        1500000,
+        UserProfile("Andi", null),
+        "Laptop",
+        4500000.0
+    )
 }
