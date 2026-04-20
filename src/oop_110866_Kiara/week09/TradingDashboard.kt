@@ -33,4 +33,11 @@ fun main() {
     worstPerformanceString.forEach { println(it) }
     println(uniquePairs)
 
+//  output
+//  === Crypto Trading Dashboard ===
+//  WIN [ETHUSDT - LONG]: +22.1% ROE (lev: 15x)
+//  LOSS [ETHUSDT - LONG]: -22.1 % ROE (lev: 15x)
+//  [BTCUSDT, ETHUSDT, BNBUSDT]
+
+
 }
