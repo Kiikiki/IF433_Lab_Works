@@ -24,5 +24,7 @@ fun main() {
         .sortedBy { it.roe }
         .map { "LOSS [${it.pair} - ${it.position}]: -${it.roe} % ROE (lev: ${it.leverage}x)" }
 
-
+    val uniquePairs = tradeHistory
+        .map { it.pair }
+        .toSet()
 }
