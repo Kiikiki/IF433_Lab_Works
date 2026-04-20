@@ -10,4 +10,12 @@ fun main() {
     scores[0] = 88
     println("Mutable List: $scores")
 
+    println("\n=== Test Set ===")
+    val uniqueNumbers = setOf(1, 2, 2, 3, 3, 4)
+    println("Unique Numbers (set): $uniqueNumbers")
+
+    val activeUsers = mutableSetOf<String>("User A", "User B")
+    activeUsers.add("User C")
+    activeUsers.add("User A")
+    println("Active Users: $activeUsers")
 }
