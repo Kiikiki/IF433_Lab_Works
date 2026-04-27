@@ -16,4 +16,9 @@ fun main() {
     val txRepo = WalletRepository<Transaction>()
 
     txRepo.add(Transaction("TX001", 100000.0))
+
+    // Output
+    // Coin: BTC, Balance: 100.0
+    // Coin: ETH, Balance: 200.0
+    // Coin: USDT, Balance: 300.0
 }
