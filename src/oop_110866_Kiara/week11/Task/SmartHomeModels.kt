@@ -8,5 +8,5 @@ data class SmartDevice(
 )
 
 fun SmartDevice.diagnose(): String {
-    println("[DIAGNOSIS] $name | Category: $category | Status: ${if (isOnline) "Online" else "Offline"} | Power: $powerLoad Watt")
+    return ("[DIAGNOSIS] $name | Category: $category | Status: ${if (isOnline) "Online" else "Offline"} | Power: $powerLoad Watt")
 }
