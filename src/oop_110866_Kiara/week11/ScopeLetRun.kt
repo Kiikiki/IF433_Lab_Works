@@ -13,7 +13,7 @@ fun main() {
     println("\n=== Test Run Function ===")
     val result = "Kotlin".run {
         println("Processing Word: ${this}")
-        length * 2
+        this.length * 2
     }
     println("Result run: $result")
 }
