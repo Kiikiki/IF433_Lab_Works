@@ -20,4 +20,24 @@ fun main() {
         homeDevice.add(it)
         println("[LOG] Camera is Connected")
     }
+
+    homeDevice.run {
+        SmartDevice().apply {
+            name = "Daikin Inverter (cabel 3 x 2.5)"
+            category = "HVAC"
+            isOnline = false
+            powerLoad = 800
+        }.also {
+            homeDevice.add(it)
+        }
+
+        SmartDevice().apply {
+            name = "Picolo's Auto Feeder"
+            category = "Pet Care"
+            isOnline = true
+            powerLoad = 10
+        }.also {
+            homeDevice.add(it)
+        }
+    }
 }
