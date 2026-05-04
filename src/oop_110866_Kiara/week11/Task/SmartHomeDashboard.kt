@@ -49,4 +49,8 @@ fun main() {
         val result = it.diagnose()
         println(result)
     }
+
+    with(homeDevice) {
+        println("total devices: ${this.size}")
+    }
 }
