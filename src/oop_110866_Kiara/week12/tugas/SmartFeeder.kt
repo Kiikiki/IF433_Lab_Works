@@ -6,4 +6,10 @@ fun dispenseKibble(requestedGram: Int, availableGram: Int, isJammed: Boolean): I
     if (isJammed) {
         throw FeederException.DispenserJamException()
     }
+    if (requestedGram > availableGram) {
+        throw FeederException.FoodEmptyException(requestedGram, availableGram)
+    }
+
+    println("Kibble successfully given out!")
+    return availableGram - requestedGram
 }
