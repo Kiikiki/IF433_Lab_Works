@@ -15,4 +15,31 @@ fun dispenseKibble(requestedGram: Int, availableGram: Int, isJammed: Boolean): I
 }
 fun main() {
     var currentKibbleStock = 50
+
+    // schedule 1
+    runCatching {
+        dispenseKibble(
+            80,
+            currentKibbleStock,
+            false
+        )
+    }.onSuccess { kibbleLeft ->
+        println("Remaining Kibble stock: $kibbleLeft")
+    }.onFailure { error ->
+        when (error) {
+            is FeederException.DispenserJamException -> {
+                println("[Error] ${error.message}")
+            }
+            is FeederException.FoodEmptyException -> {
+                println("[Error] ${error.message}")
+            }
+            else -> {
+                println("[Error] ${error.message}")
+            }
+        }
+    }
+
+    val result = runCatching {
+
+    }
 }
