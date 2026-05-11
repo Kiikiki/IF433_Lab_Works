@@ -51,6 +51,9 @@ fun main() {
     }.onSuccess { newStock ->
         currentKibbleStock = newStock
         println("Afternoon kibble distributed & successfully restocked! Remaining kibble stock: $currentKibbleStock gr")
+    }.onFailure { error ->
+        println("[Warning] ${error.message}")
+        println("Give chicken jerky manually!")
     }
 
 }
