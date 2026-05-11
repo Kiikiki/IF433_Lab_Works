@@ -48,6 +48,9 @@ fun main() {
             1000,
             isJammed = false
         )
+    }.onSuccess { newStock ->
+        currentKibbleStock = newStock
+        println("Afternoon kibble distributed & successfully restocked! Remaining kibble stock: $currentKibbleStock gr")
     }
 
 }
