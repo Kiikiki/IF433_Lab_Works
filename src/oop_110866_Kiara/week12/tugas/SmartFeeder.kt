@@ -41,4 +41,13 @@ fun main() {
         println("Morning kibble distribution finished!")
     }
 
+    //schedule 2
+    runCatching {
+        dispenseKibble(
+            30,
+            1000,
+            isJammed = false
+        )
+    }
+
 }
