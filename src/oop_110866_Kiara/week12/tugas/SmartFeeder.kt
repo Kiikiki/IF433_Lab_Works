@@ -37,9 +37,8 @@ fun main() {
                 println("[Error] ${error.message}")
             }
         }
+    }.also {
+        println("Morning kibble distribution finished!")
     }
 
-    val result = runCatching {
-
-    }
 }
