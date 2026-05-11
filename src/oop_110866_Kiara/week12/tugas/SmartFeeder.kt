@@ -55,5 +55,10 @@ fun main() {
         println("[Warning] ${error.message}")
         println("Give chicken jerky manually!")
     }
-
 }
+
+// output
+// [Error] Kibble isn't enough! Request 80 gr, Available 50 gr
+// Morning kibble distribution finished!
+// Kibble successfully given out!
+// Afternoon kibble distributed & successfully restocked! Remaining kibble stock: 970 gr
