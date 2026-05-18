@@ -65,4 +65,8 @@ fun main() {
 
     println("\nLoaded trades:")
     loadedTrades.forEach { println(it) }
+
+    val totalPnl = loadedTrades.sumOf { it.pnl }
+
+    println("Total pnl: $totalPnl")
 }
