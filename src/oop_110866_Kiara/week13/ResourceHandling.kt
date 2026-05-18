@@ -21,4 +21,11 @@ fun main() {
         }
     }
     println("100 lines of log successfully generated safely")
+
+    println("\n=== Test Buffered Reader===")
+    safeFile.bufferedReader().use { reader ->
+        reader.lineSequence().take(5).forEach { line->
+            println("Steam Read: $line")
+        }
+    }
 }
