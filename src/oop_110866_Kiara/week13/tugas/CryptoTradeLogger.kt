@@ -1,4 +1,5 @@
 package oop_110866_Kiara.week13.tugas
+import java.io.File
 
 data class TradeRecord(
     val id: Int,
@@ -25,4 +26,11 @@ fun fromCsvTrade(line: String): TradeRecord? {
         null
     }
 
+    fun saveTrades(trades: List<TradeRecord>, path: String) {
+        File(path).printWriter().use { writer ->
+            trades.forEach { trade ->
+                writer.println(trade.toCsv())
+            }
+        }
+    }
 }
