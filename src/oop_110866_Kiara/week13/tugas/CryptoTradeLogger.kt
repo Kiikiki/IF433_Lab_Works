@@ -68,5 +68,16 @@ fun main() {
 
     val totalPnl = loadedTrades.sumOf { it.pnl }
 
-    println("Total pnl: $totalPnl")
+    println("\n=== Total pnl (clean) : $totalPnl===")
 }
+
+// Trades successfully saved!
+// Corrupted data injected
+// [log] corrupted data ignored: CORRUPT_ID, DOGEUSDT, Hold, XX, YY
+//
+// Loaded trades:
+// TradeRecord(id=1, symbol= BTCUSDT, margin=500.0, pnl=120.5)
+// TradeRecord(id=2, symbol= ETHUSDT, margin=300.0, pnl=-45.0)
+// TradeRecord(id=3, symbol= SOLUSDT, margin=150.0, pnl=25.0)
+//
+// === Total pnl (clean) : 100.5 ===
