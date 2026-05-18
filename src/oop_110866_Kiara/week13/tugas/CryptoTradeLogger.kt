@@ -10,6 +10,19 @@ data class TradeRecord(
 fun TradeRecord.toCsv():String = "$id, $symbol, $margin, $pnl"
 
 fun fromCsvTrade(line: String): TradeRecord? {
-    val parts = line.split(",")
+    return try {
+        val parts = line.split(",")
+
+        val id = parts[0].toInt()
+        val symbol = parts[1]
+        val price = parts[2].toDouble()
+        val pnl = parts[3].toDouble()
+
+        TradeRecord(id, symbol, price, pnl)
+    }
+    catch (e: Exception) {
+        println("[log] corrupted data ignored: $line")
+        null
+    }
 
 }
