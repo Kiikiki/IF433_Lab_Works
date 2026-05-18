@@ -57,6 +57,12 @@ fun main() {
 
     val path = "crypto_trades.csv"
     saveTrades(trades, path)
-
     println("Trades successfully saved!")
+
+    File(path).appendText("CORRUPT_ID, DOGEUSDT, Hold, XX, YY\n")
+    println("Corrupted data injected")
+    val loadedTrades = loadTrades(path)
+
+    println("\nLoaded trades:")
+    loadedTrades.forEach { println(it) }
 }
